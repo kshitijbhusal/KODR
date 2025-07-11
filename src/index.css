@@ -1,0 +1,59 @@
+/* @import "tailwindcss";
+
+
+@theme {
+
+
+  --color-background: #212121;
+  --color-foreground: #f9fccd;
+  --color-typebg: #1f2937;
+}
+
+
+:root {
+  --color-dark: oklch(0.1 0 340);
+  --bg: oklch(0.15 0 340);
+  --color-light: oklch(0.2 0 340);
+  --text: oklch(0.96 0 340);
+  --text-muted: oklch(0.76 0 340);
+  --highlight: oklch(0.5 0 340);
+  --border: oklch(0.4 0 340);
+  --border-muted: oklch(0.3 0 340);
+  --primary: oklch(0.76 0.1 340);
+  --secondary: oklch(0.76 0.1 160);
+  --danger: oklch(0.7 0.05 30);
+  --warning: oklch(0.7 0.05 100);
+  --success: oklch(0.7 0.05 160);
+  --info: oklch(0.7 0.05 260);
+} */
+
+
+
+/* Import Tailwind's base, components, and utilities */
+@import "tailwindcss";
+
+/* Define your color palette as CSS variables */
+@theme {
+  --color-dark: oklch(0.1 0 340);
+  --color-bg: oklch(0.15 0 340);
+  /* --color-light: oklch(0.2 0 340); */
+  --color-light: #1E1E1E;
+  --color-text: oklch(0.96 0 340);
+  --color-text-muted: oklch(0.76 0 340);
+  --color-highlight: oklch(0.5 0 340);
+  --color-border: oklch(0.4 0 340);
+  --color-border-muted: oklch(0.3 0 340);
+  --color-primary: oklch(0.76 0.1 340);
+  --color-secondary: oklch(0.76 0.1 160);
+  --color-danger: oklch(0.7 0.05 30);
+  --color-warning: oklch(0.7 0.05 100);
+  --color-success: oklch(0.7 0.05 160);
+  --color-info: oklch(0.7 0.05 260);
+}
+
+/* Apply base styles to your application */
+@layer base {
+  body {
+    @apply bg-bg text-text;
+  }
+}
