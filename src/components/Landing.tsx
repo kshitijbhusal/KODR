@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from "motion/react"
-import { ToastContainer, toast } from 'react-toastify';
-import { useContext, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import { useContext } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 import ShineBorderCard from './AnimatedDiv';
 

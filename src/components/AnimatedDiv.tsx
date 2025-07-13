@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import example from "../assets/example.png"
 // Main App component that renders the ShineBorderCard

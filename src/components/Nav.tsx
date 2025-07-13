@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import '../index.css'
 import { motion } from "motion/react"
-// import supabase from '../lib/supabase'
+
 import { AuthContext } from '../contexts/AuthContext'
 import { Link } from 'react-router-dom'
 
