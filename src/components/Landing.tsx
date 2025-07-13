@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-
+import { motion } from "motion/react"
 
 // Main App component for the landing page
 export const Landing = () => {
     const navigate = useNavigate();
     return (
-        <div className="min-h-screen bg-gray-900 text-white font-sans">
+        <motion.div initial={{ opacity: 0 }} // Starting state
+            animate={{ opacity: 1 }} // Target state
+            transition={{ duration: 1 }} className="min-h-screen bg-gray-900 text-white font-sans">
             {/*  */}
 
             {/* Hero Section */}
@@ -23,8 +25,11 @@ export const Landing = () => {
                         Experience a seamless online code editor supporting HTML, CSS, and Tailwind CSS. Write, preview, and refine your web projects instantly.
                     </p>
                     {/* Changed Start Coding Now button color to yellow */}
-                    <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
-                        Start Coding Now
+                    <button onClick={() => {
+                        navigate("./playground")
+
+                    }} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
+                        Start Playground
                     </button>
                 </div>
             </header>
@@ -80,9 +85,7 @@ export const Landing = () => {
                         Join thousands of developers who are bringing their ideas to life with KODR. No setup, just pure coding.
                     </p>
                     {/* Changed Get Started button color to yellow */}
-                    <button onClick={() => {
-                        navigate("./playground")
-                    }} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-12 rounded-full text-xl shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
+                    <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-12 rounded-full text-xl shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
                         Get Started for Free
                     </button>
                 </div>
@@ -100,7 +103,7 @@ export const Landing = () => {
                     </div>
                 </div>
             </footer>
-        </div>
+        </motion.div>
     );
 };
 
