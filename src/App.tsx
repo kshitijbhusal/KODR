@@ -5,6 +5,7 @@ import { Landing } from './components/Landing'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from './contexts/AuthContext';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
 
 
           </Routes>
+          <ToastContainer />
         </BrowserRouter>
       </main>
     </>

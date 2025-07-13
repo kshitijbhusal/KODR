@@ -1,9 +1,34 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from "motion/react"
+import { ToastContainer, toast } from 'react-toastify';
+import { useContext, useEffect } from 'react';
+import { AuthContext } from '../contexts/AuthContext';
+import ShineBorderCard from './AnimatedDiv';
 
 // Main App component for the landing page
 export const Landing = () => {
+
+    const { session }: any = useContext(AuthContext)
+
+
+
+    function handleStartBtn() {
+        if (!session) {
+            toast("Please Login.", {
+                position: "bottom-right"
+            })
+            return
+        }
+
+        navigate("/playground");
+
+
+
+    }
     const navigate = useNavigate();
+
+
+
     return (
         <motion.div initial={{ opacity: 0 }} // Starting state
             animate={{ opacity: 1 }} // Target state
@@ -25,12 +50,17 @@ export const Landing = () => {
                         Experience a seamless online code editor supporting HTML, CSS, and Tailwind CSS. Write, preview, and refine your web projects instantly.
                     </p>
                     {/* Changed Start Coding Now button color to yellow */}
-                    <button onClick={() => {
-                        navigate("./playground")
-
-                    }} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
+                    <button onClick={handleStartBtn} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
                         Start Playground
                     </button>
+                    <div className=' size-100 mt-10 md:mt-0 md:size-fit md:block md:relative top-5 left-40 opacity-90 '>
+
+                        <ShineBorderCard />
+
+                    </div>
+
+
+
                 </div>
             </header>
 
@@ -103,6 +133,7 @@ export const Landing = () => {
                     </div>
                 </div>
             </footer>
+
         </motion.div>
     );
 };

@@ -1,6 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react'
 import supabase from '../lib/supabase';
 import type { Session } from '@supabase/supabase-js';
+import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -28,16 +30,30 @@ const AuthContextProvider = ({ children }: any) => {
 
     // session && console.log(session.user.user_metadata.name)
 
-    const signInWithGoogle = () => {
+    const signInWithGoogle = async () => {
+        try {
+            await supabase.auth.signInWithOAuth({
+                provider: "google"
+            });
 
-        supabase.auth.signInWithOAuth({
-            provider: "google"
-        })
+
+
+
+        } catch (error) {
+            throw new Error("Error while signIn");
+
+
+        }
+
+
 
     }
 
     const signOut = async () => {
         try {
+            toast('Logout Sucessfull.', {
+                position: "bottom-right"
+            })
             const { error } = await supabase.auth.signOut();
             if (error) {
                 throw error;
