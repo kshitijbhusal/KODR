@@ -1,0 +1,15 @@
+<svg width="128" height="128" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: Rounded rectangle with white fill -->
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="#FFFFFF"/>
+
+  <!-- Simplified Computer Monitor Shape -->
+  <rect x="16" y="16" width="32" height="24" rx="4" fill="#333333"/> <!-- Main screen area (dark grey) -->
+  <rect x="18" y="18" width="28" height="20" rx="2" fill="#FFFFFF"/> <!-- Inner screen/display (white) -->
+  <path d="M26 40 L38 40 L32 44 Z" fill="#333333"/> <!-- Monitor stand (dark grey) -->
+
+  <!-- Letter 'K' integrated cleanly into the screen -->
+  <text x="32" y="34" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="28" font-weight="bold" fill="#000000">K</text>
+
+  <!-- Optional: A subtle, clean coding-related element, like a cursor or prompt -->
+  <rect x="22" y="28" width="16" height="2" fill="#000000" rx="1"/>
+</svg>
