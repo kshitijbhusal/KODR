@@ -35,7 +35,7 @@ const Nav = (): any => {
 
     return (
         <>
-            <section className='w-full bg-dark text-foreground h-12 flex justify-between px-4 md:px-16 font-sans items-center'>
+            <section className='w-full bg-dark text-foreground h-16 flex justify-between px-4 md:px-16 font-sans items-center'>
                 <Link to="/" ><h1 className='text-2xl bg-gradient-to-bl from-cyan-400 to-red-600  text-transparent bg-clip-text font-extrabold  '>KODR</h1></Link>
 
                 <div className='flex gap-x-8'>

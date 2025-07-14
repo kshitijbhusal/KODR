@@ -36,21 +36,21 @@ export const Landing = () => {
             {/*  */}
 
             {/* Hero Section */}
-            <header className="relative flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-black overflow-hidden"> {/* Adjusted gradient */}
+            <header className="relative flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-black overflow-hidden "> {/* Adjusted gradient */}
                 <div className="absolute inset-0 z-0 opacity-10">
                     {/* Background pattern - simple dots */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[length:30px_30px]"></div>
                 </div>
-                <div className="text-center z-10 p-6 max-w-4xl mx-auto">
+                <div className="text-center z-10 p-6 max-w-4xl mx-auto mt-48 md:mt-16 ">
                     {/* Changed gradient colors for headline to yellow shades */}
-                    <h1 className="text-6xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 animate-pulse-slow">
+                    <h1 className="text-5xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 animate-pulse-slow">
                         Your Code, Your Canvas.
                     </h1>
-                    <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+                    <p className="text-base text-gray-300/80 mb-10 leading-relaxed">
                         Experience a seamless online code editor supporting HTML, CSS, and Tailwind CSS. Write, preview, and refine your web projects instantly.
                     </p>
                     {/* Changed Start Coding Now button color to yellow */}
-                    <button onClick={handleStartBtn} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
+                    <button onClick={handleStartBtn} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-6 rounded-full text-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
                         Start Playground
                     </button>
                     <div className=' size-100 mt-10 md:mt-0 md:size-fit md:block md:relative top-5 left-40 opacity-90 '>
