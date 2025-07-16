@@ -100,7 +100,7 @@ const Nav = (): any => {
                                             </button>
                                             <button
                                                 onClick={signInWithGoogle}
-                                                className="flex-1 bg-gradient-to-r from-yellow-400/20 to-yellow-400/70 text-white font-bold rounded-lg px-4 py-2 shadow-md hover:from-yellow-500/30 hover:to-yellow-500 cursor-pointer duration-300 transition flex items-center justify-center gap-2"
+                                                className="flex-1 bg-gradient-to-r from-slate-400 to-blue-400 text-white font-bold rounded-lg px-4 py-2 shadow-md hover:from-slate-400/80 hover:to-blue-400/80 cursor-pointer duration-300 transition flex items-center justify-center gap-2"
                                             >
                                                 <svg className="w-5 h-5" viewBox="0 0 48 48"><g><path fill="#4285F4" d="M44.5 20H24v8.5h11.7C34.7 33.1 30.1 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.1 8.1 2.9l6.1-6.1C34.5 6.5 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 19.7-8 19.7-20 0-1.3-.1-2.7-.2-4z" /><path fill="#34A853" d="M6.3 14.7l7 5.1C15.5 16.1 19.4 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.1-6.1C34.5 6.5 29.6 4 24 4c-7.3 0-13.5 4.1-17.7 10.7z" /><path fill="#FBBC05" d="M24 44c5.5 0 10.4-1.8 14.2-4.9l-6.6-5.4C29.7 35.7 27 36.7 24 36.7c-6.1 0-10.7-3.9-12.5-9.3l-7 5.4C7.7 39.9 15.2 44 24 44z" /><path fill="#EA4335" d="M44.5 20H24v8.5h11.7c-1.1 3.1-3.7 5.7-7.2 7.2l6.6 5.4C41.6 38.2 44.5 32.7 44.5 24c0-1.3-.1-2.7-.2-4z" /></g></svg>
                                                 Google

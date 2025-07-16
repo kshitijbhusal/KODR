@@ -16,12 +16,18 @@ const AuthContextProvider = ({ children }: any) => {
             // 'session' here will directly be the session object, or null if no session
 
             setSession(session);
-            console.log("useEffect run");
+
 
         })
-            .catch(error => {
-                console.error("Error getting session:", error);
-            });
+
+        const { data: listener } = supabase.auth.onAuthStateChange((_, session) => {
+            setSession(session ?? null)
+        })
+
+        return () => {
+            listener.subscription.unsubscribe()
+        }
+
     }, []);
 
 
@@ -53,12 +59,13 @@ const AuthContextProvider = ({ children }: any) => {
             toast('Logout Sucessfull.', {
                 position: "bottom-right"
             })
-            const { error } = await supabase.auth.signOut();
-            if (error) {
-                throw error;
-            }
-            setSession(null); // Clear session state
-            window.location.href = '/'; // Redirect to initial page (home)
+            await supabase.auth.signOut();
+            // const { error } = await supabase.auth.signOut();
+            // if (error) {
+            //     throw error;
+            // }
+            // setSession(null); // Clear session state
+            // window.location.href = '/'; // Redirect to initial page (home)
         } catch (error) {
             console.log("Error logging out", error);
         }
